@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		kalkulator sederhana
+	</title>
+</head>
+
+<body>
+	<h3>KALKULATOR SANGAT SEDERHANA</h3>
+	<input id="angka1" value='0'>
+	<select id='operasi'>
+		<option>+</option>
+		<option>-</option>
+		<option>x</option>
+		<option>:</option>
+	</select>
+	<input id="angka2" value='0'>
+	<button id="hitung">=</button>
+
+	<input id="hasil" value='0'>
+
+	<script>
+	function perhitungan(){
+		var a = document.getElementById('angka1').value;
+		var c = parseFloat(a);
+		var b = document.getElementById('angka2').value;
+		var d = parseFloat(b);
+		var operation = document.getElementById('operasi').value;
+
+		if (operation == '+'){
+			x = c+d;
+		}
+		else if (operation == '-'){
+			x = c-d;
+		}
+		else if (operation == 'x'){
+			x = c*d;
+		}
+		else if (operation == ':'){
+			x = c/d;
+		}
+
+		document.getElementById('hasil').value = x;
+	}
+
+	document.getElementById('hitung').addEventListener('click', perhitungan);
+</script>
+</body>
+
+</html>
